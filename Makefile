@@ -24,9 +24,9 @@ install:
 	install -m557 mediainv /usr/bin
 
 clean:
-	@- $(RM) $(program_NAME)
-	@- $(RM) $(program_OBJS)
-	@- rm test
+	- $(RM) $(program_NAME)
+	- $(RM) $(program_OBJS)
+	- rm test
 
 distclean: clean
 
