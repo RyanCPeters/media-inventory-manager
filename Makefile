@@ -1,9 +1,7 @@
 program_NAME := mediainv
-program_C_SRCS := $(wildcard *.c)
-program_CXX_SRCS := $(wildcard *.cpp)
-program_C_OBJS := ${program_C_SRCS:.c=.o}
+program_CXX_SRCS := $(wildcard src/*.cpp)
 program_CXX_OBJS := ${program_CXX_SRCS:.cpp=.o}
-program_OBJS := $(program_C_OBJS) $(program_CXX_OBJS)
+program_OBJS := $(program_CXX_OBJS)
 program_INCLUDE_DIRS := src
 program_LIBRARY_DIRS :=
 program_LIBRARIES :=
@@ -14,7 +12,7 @@ LDFLAGS += $(foreach library,$(program_LIBRARIES),-l$(library))
 
 .PHONY: all test install clean distclean
 
-all: $(program_NAME)
+all: $(program_NAME) test mediainv clean
 
 $(program_NAME): $(program_OBJS)
 	$(LINK.cc) $(program_OBJS) -o $(program_NAME)
@@ -28,6 +26,7 @@ install:
 clean:
 	@- $(RM) $(program_NAME)
 	@- $(RM) $(program_OBJS)
+	@- rm test
 
 distclean: clean
 
