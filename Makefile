@@ -12,7 +12,7 @@ LDFLAGS += $(foreach library,$(program_LIBRARIES),-l$(library))
 
 .PHONY: all test install clean distclean
 
-all: $(program_NAME) test mediainv clean
+all: $(program_NAME) test install mediainv clean
 
 $(program_NAME): $(program_OBJS)
 	$(LINK.cc) $(program_OBJS) -o $(program_NAME)
