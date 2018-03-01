@@ -10,9 +10,9 @@ CPPFLAGS += $(foreach includedir,$(program_INCLUDE_DIRS),-I$(includedir)) -O2
 LDFLAGS += $(foreach librarydir,$(program_LIBRARY_DIRS),-L$(librarydir))
 LDFLAGS += $(foreach library,$(program_LIBRARIES),-l$(library))
 
-.PHONY: all test install clean distclean
+.PHONY: all test install clean distclean instcheck
 
-all: $(program_NAME) test mediainv clean
+all: $(program_NAME) test install mediainv clean
 
 $(program_NAME): $(program_OBJS)
 	$(LINK.cc) $(program_OBJS) -o $(program_NAME)
@@ -22,6 +22,10 @@ test:
 
 install:
 	install -m557 mediainv /usr/bin
+
+
+instcheck: 
+	whereis mediainv)
 
 clean:
 	- $(RM) $(program_NAME)
