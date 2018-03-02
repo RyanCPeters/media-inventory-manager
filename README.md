@@ -119,6 +119,6 @@ extensible, efficiently coded, well documented, etc.
 
 
 
-[data4movies.txt][./docs/data4movies.txt]
-[data4customers.txt][./docs/data4customers.txt]
-[data4commands.txt][./docs/data4commands.txt]
+[data4movies.txt]:[./docs/data4movies.txt]
+[data4customers.txt]:[./docs/data4customers.txt]
+[data4commands.txt]:[./docs/data4commands.txt]
