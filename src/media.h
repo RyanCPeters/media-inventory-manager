@@ -1,6 +1,3 @@
-//
-// Created by R.Peters on 3/2/2018.
-//
 
 #ifndef MEDIA_INVENTORY_MANAGER_MEDIA_H
 #define MEDIA_INVENTORY_MANAGER_MEDIA_H
