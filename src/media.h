@@ -15,13 +15,14 @@ class Media {
 public:
   
   // declaring our class scope state members
-  MediaType type{nullptr};
+  MediaType medType;
   std::string title{std::string()};
   int year{2018};
   
   // declaring our virtual functions
   
-  virtual std::ostream& operator<<(std::ostream& os, const Media& printMe) = 0;
+//  virtual std::ostream& operator<<(std::ostream& os, const Media&
+//  printMe);
   
   virtual std::string getTitle() const = 0;
   

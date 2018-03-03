@@ -45,7 +45,7 @@ D, 10, Phillippe De Broca, King of Hearts, 1967
 
 - You may assume correct formatting, but codes may be invalid; e.g., in this data, the 'Z' code is an invalid entry so this line has to be discarded and users should be notified about this issue.
 - While the stock for each line is 10, do not assume that is the case in your design and implementation.
-- The classical movie type has a different format than the other two. It contains Major actor which is always formatted as two strings, first name and last name, separated by a space. Then the Release date contains month and year information, and no comma (but a space) between Major actor and Release date. In addition, for classical movies, one movie (e.g., Holiday) may have multiple lines so the total stock of this movie will be the sum of all the stocks in the lines about this movie (e.g., 20 for Holiday in the above example).
+- The classical movie medType has a different format than the other two. It contains Major actor which is always formatted as two strings, first name and last name, separated by a space. Then the Release date contains month and year information, and no comma (but a space) between Major actor and Release date. In addition, for classical movies, one movie (e.g., Holiday) may have multiple lines so the total stock of this movie will be the sum of all the stocks in the lines about this movie (e.g., 20 for Holiday in the above example).
 
 #### To store the data in the system
 
@@ -76,12 +76,12 @@ You can also assume that this data is formatted correctly.
 
 ### Details in data4commands.txt 
 
-This fill will be used to test your code. The first field is action type (B, R, I, or H). Then
+This fill will be used to test your code. The first field is action medType (B, R, I, or H). Then
 the rest of fields are as follows:
 
 - Action types I: no more fields
-- Action type H: one more field customer ID. Fields are separated by a space
-- Action types B and R: customer ID followed by type of media (currently only ‘D’ for DVD) then movie type and movie data (with values of the two sorting attributes, using comma or space to separate them as in the movie data file). Fields are separated by a space.
+- Action medType H: one more field customer ID. Fields are separated by a space
+- Action types B and R: customer ID followed by medType of media (currently only ‘D’ for DVD) then movie medType and movie data (with values of the two sorting attributes, using comma or space to separate them as in the movie data file). Fields are separated by a space.
 
 For example,
 

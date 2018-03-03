@@ -24,7 +24,7 @@
 union Primary {
   // Comedy:
   // the comedy's title as a single or multi-word string
-  std::string comedy_titl{std::string()};
+  std::string comedy_titl;
   
   // Drama:
   // The director's name in the drama, saved as a single string in the
@@ -33,11 +33,11 @@ union Primary {
   // Note that the middle name inside of the square brackets  []  is
   // optional, and shall only be included where the official inventory input
   // file includes it.
-  std::string drama_dirctr{std::string()};
+  std::string drama_dirctr;
   
   // Classic:
-  int classic_year{2018}; // the year the classic was released
-  int classic_mnth{12};  // the month the classic was released
+  int classic_year; // the year the classic was released
+  int classic_mnth;  // the month the classic was released
 };
 
 /**
@@ -46,11 +46,11 @@ union Primary {
  */
 union Secondary {
   // Comedy:
-  int comedy_year{2018}; // the year the comedy was released
+  int comedy_year; // the year the comedy was released
   
   // Drama:
   // the drama's title as a single or multi-word string
-  std::string drama_titl{std::string()};
+  std::string drama_titl;
   
   // Classic:
   // the leading actor's name in the classic, saved as a single string in the
@@ -59,7 +59,7 @@ union Secondary {
   // Note that the middle name inside of the square brackets  []  is
   // optional, and shall only be included where the official inventory input
   // file includes it.
-  std::string classic_actr{std::string()};
+  std::string classic_actr;
 };
 
 class Criteria {
