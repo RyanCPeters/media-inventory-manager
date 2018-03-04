@@ -11,11 +11,13 @@
 class Classic : private Movie{
 public:
   
-  Classic(std::string medTitle, int medYear, int movMonth,
-            std::string dir, std::string actor);
+  Classic(const std::string &medTitle, std::vector<int> year_month,
+          std::string dir, std::vector<std::string> actor);
 
 
 private:
+
+  
   std::string getTitle() const override;
   
   int getYear() const override;
@@ -32,14 +34,6 @@ private:
   // in order to prevent people from creating a useless
   // empty, Movie object.
   Classic();
-  
-  int month;
-  
-  /**
-   *
-   */
-  std::vector<std::string> actors{};
-  
 };
 
 

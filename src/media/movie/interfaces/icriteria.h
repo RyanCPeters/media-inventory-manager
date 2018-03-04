@@ -51,13 +51,13 @@ public:
   
     explicit Primary(std::string comdram):com_dram(std::move(comdram)){}
   
-    explicit Primary(const std::vector<int>& date)
-        :classic_date(date.begin(),date.end())
+    explicit Primary(std::vector<int> date)
+        :classic_date(std::move(date))
     {}
     
-    ~Primary(){}
+    ~Primary() = default;
   
-  }prim = {};
+  };
 
 /**
  * The internal data types of this union are named according to their
@@ -88,18 +88,29 @@ public:
     std::vector<std::string> dram_classic;
     
     Secondary():c(' '){}
-    
+  
     explicit Secondary(int year):comedy_year(year){}
-    
-    explicit Secondary(std::string director_or_actor)
+  
+    explicit Secondary(std::vector<std::string> director_or_actor)
         :dram_classic({std::move(director_or_actor)})
     {}
-  
-    ~Secondary(){}
     
-  }sec = {};
+    explicit Secondary(const Secondary& othr){
+    
+    }
   
-  Criteria() = default;
+    ~Secondary() = default;
+    
+  };
+  
+  // initializing primary/secondary objects.
+  Primary prim;
+  Secondary sec;
+  
+  Criteria(Primary pr, Secondary sc): prim(std::move(pr)), sec(std::move(sc)){};
+  
+private:
+  Criteria();
 
 };
 

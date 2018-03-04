@@ -19,10 +19,13 @@ int main() {
   
   std::cout << "test Casablanca classic movie entry for Classic class"
             << std::endl;
-  Classic classic2 = Classic( "Casablanca", 1942, 8,
-                             "Michael Curtiz", "Ingrid Bergman");
-
-	return 0;
+  Classic classic2 = Classic( "Casablanca",
+                              1942,
+                              8,
+                              "Michael Curtiz",
+                              "Ingrid Bergman");
+  
+  return 0;
 }
 
 /*
