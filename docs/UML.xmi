@@ -70,7 +70,7 @@
           <UML:Parameter isSpecification="false" xmi.id="udCvm4iIwPAwp" name="RHValue" visibility="private" medType="u41Itbgps5O0m" value=""/>
          </UML:BehavioralFeature.parameter>
         </UML:Operation>
-        <UML:Operation isSpecification="false" isLeaf="false" xmi.id="uh1V41Xzcq0HO" isAbstract="false" name="getType" visibility="public" isOverride="false" isRoot="false" isQuery="false">
+        <UML:Operation isSpecification="false" isLeaf="false" xmi.id="uh1V41Xzcq0HO" isAbstract="false" name="getMediaType" visibility="public" isOverride="false" isRoot="false" isQuery="false">
          <UML:BehavioralFeature.parameter>
           <UML:Parameter xmi.id="u2MvGhpdxxOyR" medType="uoZOXffShTr2F" kind="return"/>
          </UML:BehavioralFeature.parameter>

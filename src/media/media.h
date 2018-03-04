@@ -29,7 +29,7 @@ public:
   
   virtual int getYear() const = 0;
   
-  virtual MediaType getType() const = 0;
+  virtual MediaType getMediaType() const = 0;
   
   virtual int compare(const Media& rhs) const = 0;
   

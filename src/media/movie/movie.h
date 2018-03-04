@@ -6,17 +6,16 @@
 #define MEDIA_INVENTORY_MANAGER_MOVIE_H
 
 #include <vector>
-#include "media.h"
+#include "media/media.h"
 #include "icriteria.h"
 
 enum class MovieType : char { COMEDY = 'F', DRAMA = 'D', CLASSIC = 'C',empty = ' '};
 
-class Movie : private Media, public Criteria{
+class Movie : protected Media, public Criteria{
 public:
   
   MovieType movType;
   std::string dirctr;
-  std::vector<std::string> actors{};
   
   
   /**
@@ -32,17 +31,19 @@ public:
    * @param dir
    * @param actor
    */
-  Movie(char movType,
+  Movie(MovieType movType,
         std::string medTitle,
         int medYear,
-        std::string dir,
-        std::string actor);
+        std::string dir);
   
   
   /**
    *
    */
   virtual ~Movie();
+  
+  
+  virtual MovieType getMovieType()const = 0;
   
 };
 

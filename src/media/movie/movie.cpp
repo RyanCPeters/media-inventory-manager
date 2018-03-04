@@ -17,12 +17,11 @@ Movie::Movie()
  * @param dir
  * @param actor
  */
-Movie::Movie(char movType, std::string medTitle, int medYear,
-             std::string dir, std::string actor)
+Movie::Movie(MovieType movType, std::string medTitle, int medYear,
+             std::string dir)
     : Media(MediaType::MOVIE, std::move(medTitle), medYear),
-      movType((MovieType)movType),
-      dirctr(std::move(dir)),
-      actors({std::move(actor)})
+      movType(movType),
+      dirctr(std::move(dir))
 {}
 
 
