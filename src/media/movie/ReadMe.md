@@ -6,15 +6,15 @@ Currently we have a structure that looks like this:
         
 ```
         
-        interface(s) -- icriteria.h                comedy.h
-      /                                         /
-Movie                    --------- header_files -- drama.h
-      \                /                        \
-        movie_genre(s)                             classic.h
-                       \
-                        \                          comedy.cpp
-                         \                      /
-                           implementation_files -- drama.cpp
-                                                \
-                                                   classic.cpp
+          interfaces -- icriteria.h               comedy.h
+      /                                        /  
+Movie                   --------- header_files -- drama.h
+      \               /                        \  
+        movie_genres                              classic.h
+                      \                           
+                       \                          comedy.cpp
+                        \                      /  
+                          implementation_files -- drama.cpp
+                                               \  
+                                                  classic.cpp
 ```
