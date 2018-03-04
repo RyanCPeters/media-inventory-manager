@@ -8,13 +8,11 @@ Currently we have a structure that looks like this:
         
           interfaces -- { icriteria.h }
       /                                        
-Movie                   header_files -- { comedy.h, drama.h, classic.h } 
+Movie                  header_files ---------- { comedy.h,   drama.h,   classic.h } 
       \               /                         
         movie_genres                              
-                      \                           
-                       \                          
-                        \                      
-                          implementation_files -- { comedy.cpp, drama.cpp, classic.cpp }
+                      \                     
+                       implementation_files -- { comedy.cpp, drama.cpp, classic.cpp }
                                                
                                                   
 ```
