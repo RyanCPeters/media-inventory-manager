@@ -4,6 +4,7 @@ The folder structure for our media files that are specific to movies is structur
 
 Currently we have a structure that looks like this:
         
+```
         
         interface(s) -- icriteria.h             comedy.h
       /                                      /
@@ -16,3 +17,4 @@ Movie                           header_files -- drama.h
                            implementation_files -- drama.cpp
                                                 \
                                                    classic.cpp
+```
