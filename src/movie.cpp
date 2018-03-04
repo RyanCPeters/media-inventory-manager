@@ -5,15 +5,9 @@
 #include "movie.h"
 
 Movie::Movie()
-    : medType(std::move(MediaType::MOVIE)),
-      title(nullptr),
-      year(2018),
-      movType(nullptr),
-      dirctr(nullptr),
-      actors({nullptr})
-{
-
-}
+    : Media(MediaType::MOVIE, nullptr,2018), Criteria(),
+      movType(MovieType::empty), dirctr(std::string())
+{}
 
 /**
  *
@@ -25,10 +19,8 @@ Movie::Movie()
  */
 Movie::Movie(char movType, std::string medTitle, int medYear,
              std::string dir, std::string actor)
-    : medType(std::move(MediaType::MOVIE)),
-      title(std::move(medTitle)),
-      year(std::move(medYear)),
-      movType(std::move((MovieType)movType)),
+    : Media(MediaType::MOVIE, std::move(medTitle), medYear),
+      movType((MovieType)movType),
       dirctr(std::move(dir)),
       actors({std::move(actor)})
 {}

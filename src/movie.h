@@ -9,13 +9,13 @@
 #include "media.h"
 #include "icriteria.h"
 
-enum class MovieType : char { COMEDY = 'F', DRAMA = 'D', CLASSIC = 'C'};
+enum class MovieType : char { COMEDY = 'F', DRAMA = 'D', CLASSIC = 'C',empty = ' '};
 
 class Movie : private Media, public Criteria{
 public:
   
-  MovieType movType{nullptr};
-  std::string dirctr{std::string()};
+  MovieType movType;
+  std::string dirctr;
   std::vector<std::string> actors{};
   
   
