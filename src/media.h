@@ -5,7 +5,7 @@
 #include <iosfwd>
 #include <string>
 
-enum class MediaType : int { MOVIE = 0, MUSIC = 1, USB = 2 };
+enum class MediaType : short { MOVIE = 0, MUSIC = 1, USB = 2 };
 
 
 class Media {
@@ -15,6 +15,10 @@ public:
   MediaType medType;
   std::string title{std::string()};
   int year{2018};
+  
+  Media(const MediaType& mtype, std::string ttl, const int& yr)
+        :medType(mtype),title(std::move(ttl)), year(yr){};
+  
   
   // declaring our virtual functions
   
