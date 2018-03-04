@@ -5,6 +5,7 @@
 #ifndef MEDIA_INVENTORY_MANAGER_COMEDY_H
 #define MEDIA_INVENTORY_MANAGER_COMEDY_H
 
+#include "../../movie.h"
 
 class comedy {
 

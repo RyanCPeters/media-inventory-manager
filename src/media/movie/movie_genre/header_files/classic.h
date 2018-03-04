@@ -6,7 +6,7 @@
 #define MEDIA_INVENTORY_MANAGER_CLASSIC_H
 
 
-#include "movie.h"
+#include "../../movie.h"
 
 class Classic : private Movie{
 public:

@@ -1,8 +1,8 @@
 #include <iostream>
-#include <media/movie/classic.h>
+#include <media/movie/movie_genre/header_files/classic.h>
 #include "hashtable.h"
 #include "media/movie/movie.h"
-#include "media/movie/icriteria.h"
+#include "media/movie/interface/icriteria.h"
 
 
 int main() {

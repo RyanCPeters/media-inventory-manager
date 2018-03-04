@@ -7,7 +7,7 @@
 
 #include <vector>
 #include "media/media.h"
-#include "icriteria.h"
+#include "interface/icriteria.h"
 
 enum class MovieType : char { COMEDY = 'F', DRAMA = 'D', CLASSIC = 'C',empty = ' '};
 

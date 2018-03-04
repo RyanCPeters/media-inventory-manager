@@ -2,13 +2,14 @@
 // Created by Peter on 3/4/2018.
 //
 
-#include "classic.h"
+#include "../header_files/classic.h"
 
 
 Classic::Classic(std::string medTitle, int medYear, int movMonth,
                  std::string dir, std::string actor)
             : Movie(MovieType::CLASSIC,std::move(medTitle),
-              medYear,month{movMonth},std::move(dir)),actors({std::move(actor)})
+              medYear,month(movMonth),std::move(dir)),actors({std::move
+                                                                                 (actor)})
 { }
 
 std::string Classic::getTitle() const {
