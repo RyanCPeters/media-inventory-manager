@@ -7,8 +7,18 @@
 
 #include "../../movie.h"
 
-class drama {
-
+class Drama {
+  
+  Drama( const std::string &medTitle,
+         int year,
+         int month,
+         std::string dir );
+  
+  Drama( const std::string &medTitle,
+         int year,
+         int month,
+         std::string dir,
+         std::string actor);
 };
 
 

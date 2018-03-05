@@ -119,6 +119,9 @@ public:
     }
     
   }
+  
+  virtual MovieType getMovieType()const = 0;
+  
 };
 
 #endif //MEDIA_INVENTORY_MANAGER_COMPARABLE_INTERFACE_H

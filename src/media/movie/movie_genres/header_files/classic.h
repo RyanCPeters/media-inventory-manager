@@ -8,7 +8,7 @@
 
 #include "../../movie.h"
 
-class Classic : private Movie{
+class Classic : public Movie{
 public:
   
   Classic(
@@ -18,20 +18,9 @@ public:
       std::string dir,
       std::string actor
   );
-
-
+  
 private:
 
-  
-  std::string getTitle() const override;
-  
-  int getYear() const override;
-  
-  MediaType getMediaType() const override;
-  
-  MovieType getMovieType() const override;
-  
-  int compare(const Media &rhs) const override;
 
 
   // establishing the empty constructor as private

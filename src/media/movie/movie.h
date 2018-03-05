@@ -10,13 +10,20 @@
 
 
 
-class Movie :  public ICriteria, protected Media{
-public:
-  
+class Movie :  public ICriteria, public Media{
+
+private:
+  /**
+   *
+   */
   MovieType movType;
+  
+  /**
+   *
+   */
   std::string dirctr;
   
-  
+public:
   
   /**
    *
@@ -31,8 +38,9 @@ public:
    * @param dir
    * @param actor
    */
-  Movie(MovieType movieType, std::string medTitle, int year, std::string dir,
-        int releaseMonth, std::string majorActor);
+  Movie(MediaType mediaType, MovieType movieType, std::string medTitle,
+        int year, std::string dir, int releaseMonth,
+        std::string majorActor);
   
   
   /**
@@ -40,8 +48,30 @@ public:
    */
   virtual ~Movie();
   
+  /**
+   *
+   * @param rhs
+   * @return
+   */
+  virtual int compareMovies(const Movie &rhs) const;
   
-  virtual MovieType getMovieType()const = 0;
+  /**
+   *
+   * @return
+   */
+  MovieType getMovieType() const override;
+  
+  /**
+   *
+   * @param rhs
+   * @return
+   */
+  virtual int compareMedia(const IMedia &rhs) const override
+  {
+    return (getMediaType() < rhs.getMediaType())? (short)-1
+          :(getMediaType() > rhs.getMediaType())? (short) 1
+          :(short) 0;
+  }
   
 };
 

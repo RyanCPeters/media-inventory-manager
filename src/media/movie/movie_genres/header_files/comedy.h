@@ -8,31 +8,37 @@
 
 #include "../../movie.h"
 
-class Comedy : private Movie{
+class Comedy : public Movie{
 public:
   
+  /**
+   *
+   * @param medTitle
+   * @param year
+   * @param month
+   * @param dir
+   */
   Comedy(
       const std::string &medTitle,
       int year,
       int month,
       std::string dir
   );
-
-
+  
+  /**
+   *
+   * @param medTitle
+   * @param year
+   * @param month
+   * @param dir
+   * @param actor
+   */
+  Comedy(const std::string &medTitle, int year, int month, std::string dir,
+         std::string actor);
+  
+  
+  
 private:
-  
-  
-  std::string getTitle() const override;
-  
-  int getYear() const override;
-  
-  MediaType getMediaType() const override;
-  
-  MovieType getMovieType() const override;
-  
-  int compare(const Media &rhs) const override;
-
-
   // establishing the empty constructor as private
   // in order to prevent people from creating a useless
   // empty, Movie object.

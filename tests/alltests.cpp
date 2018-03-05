@@ -4,35 +4,67 @@
 #include "../src/media/movie/movie.h"
 #include "../src/media/movie/interfaces/icriteria.h"
 
+using namespace std;
 
 int main() {
-	std::cout << "[+] Running all tests -" << std::endl;
+	cout << "[+] Running all tests -" << endl;
 
   //run tests here
-//  std::cout << "test empty constructor" << std::endl;
+//  cout << "test empty constructor" << endl;
 //  Movie mm = Movie();
 //
-//  std::cout << "test sleepless in seattle comedy movie entry" << std::endl;
+//  cout << "test sleepless in seattle comedy movie entry" << endl;
 //  Movie m = Movie('F',"Sleepless in Seattle",1996,"Emily Noah", nullptr);
-//  std::cout << "test empty constructor for Classic" << std::endl;
+//  cout << "test empty constructor for Classic" << endl;
 //  Classic classic = Classic();
   
-  std::cout << "test Casablanca classic movie entry for Classic class"
-            << std::endl;
-  Classic classic2( "Casablanca",
+  cout << "test classic1 construction: Casablanca classic movie entry for "
+      "Classic class" << endl;
+  Classic classic1( "Casablanca",
                     1942,
                     8,
                     "Michael Curtiz",
                     "Ingrid Bergman");
   
-  std::cout << "test Casablanca alter version classic movie entry for Classic class"
-            << std::endl;
-  Classic classic3( "Casablanca",
+  cout << "test classic2 construction: Casablanca alter version classic movie"
+      " entry for Classic class" << endl;
+  Classic classic2( "Casablanca",
                     1942,
                     8,
                     "Michael Curtiz",
                     "Humphrey Bogart");
   
+  cout << "test classic1.compareMedia(classic2) "
+       << classic1.compareMedia(classic2) << endl
+       << "expected output is :: 0 " << endl;
+  
+  cout << "test classic1.compareMovies(classic2) "
+       << classic1.compareMovies(classic2) << endl
+       << "expected output is :: 1 " << endl;
+  
+  cout << "test classic1 construction: Casablanca classic movie entry for "
+      "Classic class" << endl;
+  Drama drama1( "Casablanca",
+                    1942,
+                    8,
+                    "Michael Curtiz",
+                    "Ingrid Bergman");
+  
+  cout << "test classic2 construction: Casablanca alter version classic movie"
+      " entry for Classic class" << endl;
+  Drama drama2( "Casablanca",
+                    1942,
+                    8,
+                    "Michael Curtiz",
+                    "Humphrey Bogart");
+  
+  cout << "test classic1.compareMedia(classic2) "
+       << classic1.compareMedia(classic2) << endl
+       << "expected output is :: 0 " << endl;
+  
+  cout << "test classic1.compareMovies(classic2) "
+       << classic1.compareMovies(classic2) << endl
+       << "expected output is :: 1 " << endl;
   
   return 0;
 }
