@@ -39,22 +39,14 @@ public:
      *    and, classic.primary[1] would return the month of release.
      */
     std::vector<int> classic;
+
+    Primary():classic{}{};
     
-//    explicit Primary(MovieType mt, std::vector<int> pr)
-//        : classic({std::move(pr)}){};
-//
-//    explicit Primary(MovieType mt, std::string pr){
-//      switch (mt){
-//        case MovieType::COMEDY: comedy = {std::move(pr)};
-//          break;
-//        case MovieType::DRAMA: drama = {std::move(pr)};
-//          break;
-//        default:
-//          classic = {};
-//          break;
-//      }
-//    };
-  }primary = {""};
+    explicit Primary(int year, int month){
+      std::vector<int> tmp({year,month});
+      classic = {std::move(tmp)};
+    };
+  }primary;
   
   union Secondary {
     ~Secondary() { }
@@ -74,15 +66,15 @@ public:
      * major staring actor(s) in the movie.
      */
     std::vector<std::string> classic;
-    
-//    explicit Secondary(int sc):comedy(std::move(sc)){};
-//
-//    explicit Secondary(std::string sc): drama(std::move(sc)){};
-//
-//    explicit Secondary(std::vector<std::string> sc)
-//        : classic(std::move(sc)){};
   
-  }secondary = {0};
+    Secondary():classic{}{};
+  
+    explicit Secondary(std::string name){
+    std::vector<std::string> tmp(1,name);
+    classic = {std::move(tmp)};
+    };
+  
+  }secondary;
   
   
   // simple empty ctor for union criteria initialization
@@ -120,7 +112,7 @@ public:
         secondary.drama = {std::move(ttl)};
         return;
       case MovieType::CLASSIC:
-        primary.classic = {std::move(std::vector<int>({year,month}))};
+        primary.classic = {std::vector<int>({year,month})};
         secondary.classic = {std::move(std::vector<std::string>({majorActor}))};
         break;
       default:break;
