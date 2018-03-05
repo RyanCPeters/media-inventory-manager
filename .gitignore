@@ -1,8 +1,5 @@
 test
 mediainv
+src/.\#*
+src/*.o
 .\#*
-
-# JetBrains' CLion auto-gen files
-.idea/
-[Cc][Mm]ake*.*
-[Cc][Mm]ake*/

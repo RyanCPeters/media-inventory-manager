@@ -1,7 +1,7 @@
 #include <iostream>
-#include "../src/media/movie/movie_genres/header_files/classic.h"
-#include "../src/media/movie/movie_genres/header_files/drama.h"
-#include "../src/media/movie/movie_genres/header_files/comedy.h"
+#include "media/movie/movie_genres/header_files/classic.h"
+#include "media/movie/movie_genres/header_files/drama.h"
+#include "media/movie/movie_genres/header_files/comedy.h"
 
 
 using namespace std;
