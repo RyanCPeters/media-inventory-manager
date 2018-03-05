@@ -7,4 +7,4 @@ extern HashTableForTesting<int, int> testTable;
 void hashTableTest(){
   cout << "[+] Testing HashTable" << endl;
 }
-XS\\
+

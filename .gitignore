@@ -3,3 +3,4 @@ mediainv
 src/.\#*
 src/*.o
 .\#*
+tests/*.o
