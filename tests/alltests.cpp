@@ -25,6 +25,15 @@ int main() {
                     "Michael Curtiz",
                     "Ingrid Bergman");
   
+  std::cout << "test Casablanca alter version classic movie entry for Classic class"
+            << std::endl;
+  Classic classic3( "Casablanca",
+                    1942,
+                    8,
+                    "Michael Curtiz",
+                    "Humphrey Bogart");
+  
+  
   return 0;
 }
 

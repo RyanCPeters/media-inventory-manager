@@ -9,7 +9,7 @@
 
   
 
-class Criteria{
+class ICriteria{
 public:
   
   /*
@@ -42,7 +42,7 @@ public:
 
     Primary():classic{}{};
     
-    explicit Primary(int year, int month){
+    Primary(int year, int month){
       std::vector<int> tmp({year,month});
       classic = {std::move(tmp)};
     };
@@ -70,7 +70,7 @@ public:
     Secondary():classic{}{};
   
     explicit Secondary(std::string name){
-    std::vector<std::string> tmp(1,name);
+    std::vector<std::string> tmp(1,std::move(name));
     classic = {std::move(tmp)};
     };
   
@@ -78,7 +78,7 @@ public:
   
   
   // simple empty ctor for union criteria initialization
-  Criteria() = default;
+  ICriteria() = default;
   
   /** Ctor for our union Criteria object.
    * Takes a valid MovieType object, along with appropriate parameter
@@ -92,7 +92,7 @@ public:
    * @param month
    * @param majorActor
    */
-  Criteria(const MovieType& mt,
+  ICriteria(const MovieType& mt,
            std::string ttl = std::string(),
            int year = 2018,
            std::string dir = std::string(),
@@ -101,7 +101,7 @@ public:
   {
   
     // this switch block uses the movieType as an indicator for which genre
-    // specific struct to initialize for this union Criteria object.
+    // specific struct to initialize for this union ICriteria object.
     switch (mt){
       case MovieType::COMEDY:
         primary.comedy = {std::move(ttl)};

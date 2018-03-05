@@ -10,7 +10,7 @@
 
 
 
-class Movie :  public Criteria, protected Media{
+class Movie :  public ICriteria, protected Media{
 public:
   
   MovieType movType;
@@ -27,11 +27,11 @@ public:
    *
    * @param medType
    * @param medTitle
-   * @param medYear
+   * @param year
    * @param dir
    * @param actor
    */
-  Movie(MovieType movieType, std::string medTitle, int medYear, std::string dir,
+  Movie(MovieType movieType, std::string medTitle, int year, std::string dir,
         int releaseMonth, std::string majorActor);
   
   

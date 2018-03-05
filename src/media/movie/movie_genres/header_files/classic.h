@@ -34,7 +34,6 @@ private:
   int compare(const Media &rhs) const override;
 
 
-private:
   // establishing the empty constructor as private
   // in order to prevent people from creating a useless
   // empty, Movie object.

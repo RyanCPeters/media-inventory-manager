@@ -8,23 +8,23 @@
  *
  */
 Movie::Movie()
-    : Media(MediaType::MOVIE, nullptr,2018), Criteria(),
+    : Media(MediaType::MOVIE, nullptr,2018), ICriteria(),
       movType(MovieType::empty), dirctr(std::string())
 {}
 
 
 Movie::Movie(MovieType movieType,
              std::string medTitle,
-             int medYear,
+             int year,
              std::string dir,
              int releaseMonth = 0,
              std::string majorActor = std::string())
-    : Media(medType,std::move(medTitle),medYear),
+    : Media(medType,std::move(medTitle),year),
       movType(movieType),
       dirctr(std::move(dir)),
-      Criteria(movieType,
+      ICriteria(movieType,
                medTitle,
-               medYear,
+               year,
                dir,
                releaseMonth,
                std::move(majorActor))
