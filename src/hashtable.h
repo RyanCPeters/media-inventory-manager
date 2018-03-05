@@ -49,6 +49,15 @@ public:
   static K getHash(K);
 };
 
-#include "hashtable.cpp"
+template <class K, class V>
+HashTable<K, V>::HashTable(K(*hashFunction)(K)){
+  this->hasher = hashFunction;
+  this->numOfEntries = 0;
+}
+
+template<class K, class V>
+void HashTable<K,V>::enroll(K, V){
+
+}
 
 #endif //HASHTABLE_H

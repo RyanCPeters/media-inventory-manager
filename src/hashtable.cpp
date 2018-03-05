@@ -1,9 +1,2 @@
-// THIS IS TO BE INCLUDED AT THE BOTTOM OF HASHTABLE.H
-// DO NOT MANUALLY COMPILE THIS FILE
-
-#ifndef HASHTABLE_CPP
-#define HASHTABLE_CPP
-
-
-
-#endif HASHTABLE_CPP
+// this file purely for ornamentation.
+// HashTable is a template class and all functions need to be within the header
