@@ -4,30 +4,31 @@
 
 #include "movie.h"
 
+/** custom empty constructor implementation
+ *
+ */
 Movie::Movie()
     : Media(MediaType::MOVIE, nullptr,2018), Criteria(),
       movType(MovieType::empty), dirctr(std::string())
 {}
 
-/**
- *
- * @param medType
- * @param medTitle
- * @param medYear
- * @param dir
- * @param actor
- */
-Movie::Movie(Primary prm, Secondary sc, MovieType movieType,
-             std::string medTitle, int medYear, std::string dir)
-    : Criteria(prm, sc),
-      Media(
-            MediaType::MOVIE,
-            std::move(medTitle),
-            medYear
-            ),
+
+Movie::Movie(MovieType movieType,
+             std::string medTitle,
+             int medYear,
+             std::string dir,
+             int releaseMonth = 0,
+             std::string majorActor = std::string())
+    : Media(medType,std::move(medTitle),medYear),
       movType(movieType),
-      dirctr(std::move(dir))
-{}
+      dirctr(std::move(dir)),
+      Criteria(movieType,
+               medTitle,
+               medYear,
+               dir,
+               releaseMonth,
+               std::move(majorActor))
+{ }
 
 
 Movie::~Movie() {}

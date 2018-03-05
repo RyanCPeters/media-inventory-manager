@@ -6,20 +6,22 @@
 
 
 Classic::Classic(
-    const std::string &medTitle,
-    std::vector<int> year_month,
-    std::string dir,
-    std::vector<std::string> actor
-)
-            : Movie( {year_month},{actor},
-                     MovieType::CLASSIC,
-                     medTitle,
-                     // zero'th index of year_month should be the year value
-                     year_month[0], dir)
+                  const std::string &medTitle,
+                  int year,
+                  int month,
+                  std::string dir,
+                  std::string actor
+                )
+            : Movie(MovieType::CLASSIC,
+                    medTitle,
+                    year,
+                    dir,
+                    month,
+                    actor)
 { } // end Classic::Classic(...)
 
 std::string Classic::getTitle() const {
-  return std::__cxx11::string();
+  return std::string();
 }
 
 int Classic::getYear() const {

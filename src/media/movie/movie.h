@@ -5,15 +5,17 @@
 
 #include <vector>
 #include "interfaces/icriteria.h"
+#include "interfaces/movie_enums.h"
 #include "../media.h"
 
-enum class MovieType : char { COMEDY = 'F', DRAMA = 'D', CLASSIC = 'C',empty = ' '};
+
 
 class Movie :  public Criteria, protected Media{
 public:
   
   MovieType movType;
   std::string dirctr;
+  
   
   
   /**
@@ -29,8 +31,8 @@ public:
    * @param dir
    * @param actor
    */
-  Movie(Primary prm, Secondary sc, MovieType movType,
-        std::string medTitle, int medYear, std::string dir);
+  Movie(MovieType movieType, std::string medTitle, int medYear, std::string dir,
+        int releaseMonth, std::string majorActor);
   
   
   /**

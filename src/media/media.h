@@ -16,7 +16,11 @@ public:
   std::string title{std::string()};
   int year{2018};
   
-  Media(const MediaType& mtype, std::string ttl, const int& yr)
+  Media(
+          const MediaType& mtype,
+          std::string ttl,
+          const int& yr
+        )
         :medType(mtype),title(std::move(ttl)), year(yr){};
   
   

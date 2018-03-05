@@ -11,8 +11,13 @@
 class Classic : private Movie{
 public:
   
-  Classic(const std::string &medTitle, std::vector<int> year_month,
-          std::string dir, std::vector<std::string> actor);
+  Classic(
+      const std::string &medTitle,
+      int year,
+      int month,
+      std::string dir,
+      std::string actor
+  );
 
 
 private:
