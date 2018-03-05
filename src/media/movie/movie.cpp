@@ -1,6 +1,3 @@
-//
-// Created by R.Peters on 3/2/2018.
-//
 
 #include "movie.h"
 

@@ -1,6 +1,4 @@
-//
-// Created by Peter on 3/4/2018.
-//
+
 
 #include "../header_files/classic.h"
 
@@ -21,5 +19,8 @@ Classic::Classic( const std::string &medTitle,
                     std::move(dir),
                     month,
                     std::move(actor))
-{ } // end Classic::Classic(...)
+{ }
+
+Classic::~Classic() { }
+// end Classic::Classic(...)
 

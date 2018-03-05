@@ -1,6 +1,3 @@
-//
-// Created by Peter on 3/4/2018.
-//
 
 #ifndef MEDIA_INVENTORY_MANAGER_CLASSIC_H
 #define MEDIA_INVENTORY_MANAGER_CLASSIC_H
@@ -19,6 +16,8 @@ public:
       std::string actor
   );
   
+  virtual ~Classic();
+
 private:
 
 

@@ -1,6 +1,3 @@
-//
-// Created by Peter on 3/4/2018.
-//
 
 #ifndef MEDIA_INVENTORY_MANAGER_COMEDY_H
 #define MEDIA_INVENTORY_MANAGER_COMEDY_H
@@ -36,8 +33,8 @@ public:
   Comedy(const std::string &medTitle, int year, int month, std::string dir,
          std::string actor);
   
-  
-  
+  virtual ~Comedy();
+
 private:
   // establishing the empty constructor as private
   // in order to prevent people from creating a useless

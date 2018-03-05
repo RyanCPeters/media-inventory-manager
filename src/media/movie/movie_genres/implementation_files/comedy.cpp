@@ -1,6 +1,3 @@
-//
-// Created by Peter on 3/4/2018.
-//
 
 #include "../header_files/comedy.h"
 
@@ -44,4 +41,9 @@ Comedy::Comedy( const std::string &medTitle,
             std::move(dir),
             month,
             actor)
-{ } // end Classic::Classic(...)
+{ }
+
+Comedy::~Comedy() {
+
+}
+// end Classic::Classic(...)

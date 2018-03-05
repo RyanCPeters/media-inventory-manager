@@ -1,14 +1,12 @@
-//
-// Created by Peter on 3/4/2018.
-//
+
 
 #ifndef MEDIA_INVENTORY_MANAGER_DRAMA_H
 #define MEDIA_INVENTORY_MANAGER_DRAMA_H
 
 #include "../../movie.h"
 
-class Drama {
-  
+class Drama : public Movie {
+public:
   Drama( const std::string &medTitle,
          int year,
          int month,
@@ -19,6 +17,8 @@ class Drama {
          int month,
          std::string dir,
          std::string actor);
+  
+  virtual ~Drama();
 };
 
 
