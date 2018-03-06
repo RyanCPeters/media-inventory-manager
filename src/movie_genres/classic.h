@@ -3,7 +3,7 @@
 #define MEDIA_INVENTORY_MANAGER_CLASSIC_H
 
 
-#include "../../movie.h"
+#include "../interface_files/movie.h"
 
 class Classic : public Movie{
 public:

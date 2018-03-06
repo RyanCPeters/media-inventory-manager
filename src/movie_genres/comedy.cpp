@@ -1,5 +1,5 @@
 
-#include "../header_files/comedy.h"
+#include "comedy.h"
 
 /**
  *
@@ -12,7 +12,7 @@ Comedy::Comedy( const std::string &medTitle,
                 int year,
                 int month,
                 std::string dir )
-    : Movie(MediaType::MOVIE,
+    : Movie(MediaType::movie,
             MovieType::COMEDY,
             medTitle,
             year,
@@ -34,7 +34,7 @@ Comedy::Comedy( const std::string &medTitle,
                 int month,
                 std::string dir,
                 std::string actor)
-    : Movie(MediaType::MOVIE,
+    : Movie(MediaType::movie,
             MovieType::COMEDY,
             medTitle,
             year,

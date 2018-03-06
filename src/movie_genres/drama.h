@@ -3,7 +3,7 @@
 #ifndef MEDIA_INVENTORY_MANAGER_DRAMA_H
 #define MEDIA_INVENTORY_MANAGER_DRAMA_H
 
-#include "../../movie.h"
+#include "../interface_files/movie.h"
 
 class Drama : public Movie {
 public:

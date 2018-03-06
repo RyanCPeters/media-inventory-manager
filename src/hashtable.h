@@ -49,22 +49,49 @@ public:
   K getHash(K);
 };
 
+
+// Function implementations
+
+/**
+ *
+ * @tparam K
+ * @tparam V
+ * @param hashFunction
+ */
 template <class K, class V>
 HashTable<K, V>::HashTable(K(*hashFunction)(K)){
   this->hasher = hashFunction;
   this->numberOfEntries = 0;
 }
 
+/**
+ *
+ * @tparam K
+ * @tparam V
+ * @return
+ */
 template <class K, class V>
   int HashTable<K,V>::getNumberOfEntries(){
   return this->numberOfEntries;
 }
 
+/**
+ *
+ * @tparam K
+ * @tparam V
+ */
 template<class K, class V>
 void HashTable<K,V>::enroll(K, V){
 
 }
 
+/**
+ *
+ * @tparam K
+ * @tparam V
+ * @param arg
+ * @return
+ */
 template<class K, class V>
 K HashTable<K,V>::getHash(K arg){
 return hasher(arg);

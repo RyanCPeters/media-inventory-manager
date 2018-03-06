@@ -4,10 +4,10 @@
 
 #include <iosfwd>
 #include <string>
-#include "media_interface/imedia_getters_setters.h"
 
+enum class MediaType : short { movie = 0, music = 1, dvd = 2, empty = 3 };
 
-class Media : public IMedia{
+class Media {
 private:
   // declaring our class scope state members
   MediaType medType;
@@ -24,19 +24,19 @@ public:
 //  virtual std::ostream& operator<<(std::ostream& os, const Media&
 //  printMe);
   
-  std::string getTitle() const override {
+  std::string getTitle() const {
     return title;
   }
   
-  int getYear() const override {
+  int getYear() const {
     return year;
   }
   
-  MediaType getMediaType() const override {
+  MediaType getMediaType() const {
     return medType;
   }
   
-  virtual int compareMedia(const IMedia &rhs) const override {
+  virtual int compareMedia(const Media &rhs) const {
     return (medType < rhs.getMediaType())? (short)-1
           :(medType > rhs.getMediaType())? (short)1
           :(short) 0;

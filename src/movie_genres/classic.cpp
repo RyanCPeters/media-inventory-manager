@@ -1,6 +1,6 @@
 
 
-#include "../header_files/classic.h"
+#include "classic.h"
 
 /**
  *
@@ -15,7 +15,7 @@ Classic::Classic( const std::string &medTitle,
                   int month,
                   std::string dir,
                   std::string actor )
-            : Movie(MediaType::MOVIE, MovieType::CLASSIC, medTitle, year,
+            : Movie(MediaType::movie, MovieType::CLASSIC, medTitle, year,
                     std::move(dir),
                     month,
                     std::move(actor))

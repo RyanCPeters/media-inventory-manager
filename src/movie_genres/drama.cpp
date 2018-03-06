@@ -1,6 +1,6 @@
 
 
-#include "../header_files/drama.h"
+#include "drama.h"
 
 
 /**
@@ -14,7 +14,7 @@ Drama::Drama( const std::string &medTitle,
                 int year,
                 int month,
                 std::string dir )
-    : Movie(MediaType::MOVIE,
+    : Movie(MediaType::movie,
             MovieType::DRAMA,
             medTitle,
             year,
@@ -36,7 +36,7 @@ Drama::Drama( const std::string &medTitle,
                 int month,
                 std::string dir,
                 std::string actor)
-    : Movie(MediaType::MOVIE,
+    : Movie(MediaType::movie,
             MovieType::DRAMA,
             medTitle,
             year,
