@@ -46,18 +46,28 @@ public:
   retrieveAllValues(HashTable<K, V>, bool(*sortComparator)(V, V));
 
   // helper function for unit testing purposes
-  static K getHash(K);
+  K getHash(K);
 };
 
 template <class K, class V>
 HashTable<K, V>::HashTable(K(*hashFunction)(K)){
   this->hasher = hashFunction;
-  this->numOfEntries = 0;
+  this->numberOfEntries = 0;
+}
+
+template <class K, class V>
+  int HashTable<K,V>::getNumberOfEntries(){
+  return this->numberOfEntries;
 }
 
 template<class K, class V>
 void HashTable<K,V>::enroll(K, V){
 
+}
+
+template<class K, class V>
+K HashTable<K,V>::getHash(K arg){
+return hasher(arg);
 }
 
 #endif //HASHTABLE_H

@@ -12,13 +12,13 @@ LDFLAGS += $(foreach library,$(program_LIBRARIES),-l$(library))
 
 .PHONY: all test install clean distclean
 
-all: $(program_NAME) test install mediainv clean distclean
+all: $(program_NAME) test install clean
 
 $(program_NAME): $(program_OBJS)
 	$(LINK.cc) $(program_OBJS) -o $(program_NAME)
 
 test:
-	g++ -std=c++14 -g -Wall -Wextra -o test tests/alltests.cpp; ./test
+	@- g++ -std=c++14 -g -Wall -Wextra -o test tests/alltests.cpp; ./test
 
 install:
 	install -m557 mediainv /usr/bin
@@ -27,6 +27,4 @@ clean:
 	- @- $(RM) $(program_NAME)
 	- @- $(RM) $(program_OBJS)
 	- @- rm test
-
-distclean: clean
 
